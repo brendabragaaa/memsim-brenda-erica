@@ -78,3 +78,28 @@ class MemoryManager:
                     worst_start, worst_size = start, free
                 free = 0
         return worst_start 
+    
+    def circular_fit(self, size):
+        start = self.last_alloc    #varre a memoria a partir da ultima alocação feita 
+        n = self.size
+        free, pos = 0, None
+        for i in range(n):
+            idx = (start + i) % n     #para indice circular
+            if self.memory[idx] is None:
+                if free == 0:
+                    pos = idx
+                free += 1
+                if free == size:
+                    self.last_alloc = (pos + size) % n       #atualiza onde parou para próxima busca
+                    return pos
+            else:
+                free, pos = 0, None
+        return None
+    
+    def show_memory(self):
+        print("Memoria: ", "".join([m if m else "-" for m in self.memory]))   #traço - para o espaço livre
+
+    def show_processtable(self):
+        print("Tabela de Processos: ")
+        for p, (pos, size) in self.processes.items():
+            print(f"{p}: base = {pos}, limite = {pos + size - 1}")   #mostra a tabela com endereço base e limite

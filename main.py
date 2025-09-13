@@ -1,4 +1,4 @@
-from contig.contiguous import MemoryManager
+from contig import MemoryManager
 from paging.paging import PagingSystem
 
 def menu():
