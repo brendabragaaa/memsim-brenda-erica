@@ -6,15 +6,16 @@ Ele permite explorar os conceitos de **Alocação Contígua Dinâmica** e **Pagi
 
 ## **Como executar**
 
-## **Pré-requisitos**
+### **Pré-requisitos**
 - Python 3.8+
 - Git (para clonar o repositório)
 
-## **Executando**
+### **Executando**
 Na pasta raiz do repositório, execute:
 
-'''bash
+```bash
 python main.py
+```
 
 Isso abrirá o menu principal do simulador, com as seguintes opções:
 - Alocação Contígua Dinâmica
@@ -46,4 +47,6 @@ Isso abrirá o menu principal do simulador, com as seguintes opções:
 ## Integrantes 
 - Brenda Braga de Lima
 - Érica Pilati Sartoreto
+
+
 >  Projeto acadêmico - Sistemas Operacionais II
