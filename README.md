@@ -27,7 +27,7 @@ Isso abrirá o menu principal do simulador, com as seguintes opções:
     - Algoritmos implementados:
         1. First-Fit
         2. Best-Fit
-        3. Worts-Fit
+        3. Worst-Fit
         4. Circular-Fit
     - Exibir memória e fragmentação externa claramente;
     - Mostrar tabela de processos com endereço base e limite.
@@ -46,4 +46,4 @@ Isso abrirá o menu principal do simulador, com as seguintes opções:
 ## Integrantes 
 - Brenda Braga de Lima
 - Érica Pilati Sartoreto
-    Projeto acadêmico - Sistemas Operacionais II
+>  Projeto acadêmico - Sistemas Operacionais II
