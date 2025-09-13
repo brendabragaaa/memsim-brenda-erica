@@ -33,7 +33,6 @@ class MemoryManager:
             print("Erro: Processo não encontrado!")
             return
         pos, size = self.processes.pop(name)
-
         for i in range(pos, pos+size):
             self.memory[i]= None
         print (f"Processo {name} removido.")
