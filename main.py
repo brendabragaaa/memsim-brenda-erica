@@ -1,5 +1,5 @@
 from contig import MemoryManager
-from paging.paging import PagingSystem
+from paging import PagingSystem
 
 def menu():
     while True:
