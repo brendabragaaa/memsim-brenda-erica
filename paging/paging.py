@@ -1,32 +1,34 @@
-from paging.paging import PagingSystem
+class PagingSystem:
+    def __init__(self, mem_size, page_size):
+        self.mem_size = mem_size
+        self.page_size = page_size
+        self.frames = [None] * (mem_size // page_size)  
+        self.processes = {} 
 
-def run_paging():
-    mem_size = int(input("Tamanho Total da Memoria: "))
-    page_size = int(input("Tamanho da pagina: "))
-    ps = PagingSystem(mem_size, page_size)
+    def create_process(self, name, size):
+        num_pages = (size + self.page_size - 1) // self.page_size  
+        free_frames = [i for i, f in enumerate(self.frames) if f is None]
 
-    while True:
-        print("\n--- Paginacao ---")
-        print("1. Criar Processo")
-        print("2. Mostrar Frames")
-        print("3. Mostrar Tabela de Paginas de um Processo")
-        print("0. Voltar")
+        if len(free_frames) < num_pages:
+            print(f"Memoria insuficiente para o processo {name}.")
+            return
 
-        op = input("Escolha: ")
+        allocated = free_frames[:num_pages]
+        for f in allocated:
+            self.frames[f] = name
 
-        if op == "1":
-            name = input("Nome do Processo: ")
-            size = int(input("Tamanho: "))
-            ps.create_process(name, size)
+        self.processes[name] = allocated
+        print(f"Processo {name} criado com {num_pages} paginas nos frames {allocated}.")
 
-        elif op == "2":
-            ps.show_frames()
+    def show_frames(self):
+        print("Frames de memoria:")
+        for i, frame in enumerate(self.frames):
+            print(f"Frame {i}: {frame}")
 
-        elif op == "3":
-            name = input("Nome do Processo: ")
-            ps.show_pagetable(name)
-
-        elif op == "0":
-            break
-        else: 
-            print("Opcao Invalida!")
+    def show_pagetable(self, name):
+        if name not in self.processes:
+            print(f"Processo {name} nao encontrado.")
+            return
+        print(f"Tabela de paginas do processo {name}:")
+        for i, frame in enumerate(self.processes[name]):
+            print(f"Pagina {i} -> Frame {frame}")
