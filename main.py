@@ -23,7 +23,7 @@ def menu():
 def run_contiguous():
     mm = MemoryManager(100)  #define a memoria com 100 unidades
     while True:
-        print("\n--- Alocacao Contigua ---")
+        print("\n---- Alocacao Contigua ----")
         print("1. Criar Processo")
         print("2. Remover Processo")
         print("3. Mostrar Memoria")
@@ -55,7 +55,7 @@ def run_paging():
     ps = PagingSystem(mem_size, page_size)
 
     while True:
-        print("\n--- Paginacao ---")
+        print("\n---- Paginacao ----")
         print("1. Criar Processo")
         print("2. Mostrar Frames")
         print("3. Mostrar Tabela de Paginas de um Processo")
