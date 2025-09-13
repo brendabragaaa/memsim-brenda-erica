@@ -1,28 +1,37 @@
-from contig.contiguous import MemoryManager
 from paging.paging import PagingSystem
 
-def run_presets():
-    print("\n=== Executando Preset Scenarios ===")
+def scenario1():
+    
+    ps = PagingSystem(mem_size=100, page_size=10)
 
-    # ---------- Cenário 1: Alocação Contígua ----------
-    print("\n[ Cenário 1 - Alocação Contígua ]")
-    mm = MemoryManager(50)
-    mm.create_process("P1", 10, "first")
-    mm.create_process("P2", 15, "best")
-    mm.create_process("P3", 5, "worst")
-    mm.show_memory()
-    mm.remove_process("P2")
-    mm.show_memory()
-    mm.create_process("P4", 12, "circular")
-    mm.show_memory()
-    mm.show_processtable()
+    print("\n=== Cenário 1: Criando processos ===")
+    ps.create_process("P1", 25)  # ocupa 3 páginas
+    ps.create_process("P2", 40)  # ocupa 4 páginas
+    ps.create_process("P3", 15)  # ocupa 2 páginas
 
-    # ---------- Cenário 2: Paginação ----------
-    print("\n[ Cenário 2 - Paginação ]")
-    ps = PagingSystem(32, 4)
-    ps.create_process("A", 10)
-    ps.create_process("B", 8)
-    ps.create_process("C", 12)
+    print("\n--- Frames após criação ---")
     ps.show_frames()
-    ps.show_pagetable("A")
-    ps.show_pagetable("B")
+
+    print("\n--- Tabela de páginas do processo P2 ---")
+    ps.show_pagetable("P2")
+
+    return ps  
+
+def scenario2():
+
+    ps = PagingSystem(mem_size=120, page_size=10)
+
+    print("\n=== Cenário 2: Criando e removendo processos ===")
+    ps.create_process("A", 30)
+    ps.create_process("B", 50)
+    ps.show_frames()
+
+    print("\nRemovendo processo A")
+    ps.remove_process("A")
+    ps.show_frames()
+
+    print("\nCriando processo C")
+    ps.create_process("C", 40)
+    ps.show_frames()
+
+    return ps
