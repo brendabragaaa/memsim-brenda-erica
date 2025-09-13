@@ -52,3 +52,29 @@ class MemoryManager:
             else:
                 free = 0     #reinicia a contagem se encontrar espaço ocupado
         return None
+
+    def best_fit(self,size):
+        best_start, best_size = None, self.size + 1
+        free, start = 0, 0
+        for i in range(self.size+1):
+            if i < self.size and self.memory[i] is None:
+                if free == 0: start = i
+                free += 1
+            else:
+                if size <= free < best_size:
+                    best_start, best_size = start, free
+                free = 0
+        return best_start
+
+    def worst_fit(self,size):
+        worst_start, worst_size = None, -1
+        free, start = 0,0 
+        for i in range(self.size+1):
+            if i < self.size and self.memory[i] is None:
+                if free == 0: start = i
+                free+=1
+            else:
+                if free >= size and free > worst_size:
+                    worst_start, worst_size = start, free
+                free = 0
+        return worst_start 
