@@ -1,4 +1,3 @@
-# paging_menu.py
 from paging.paging import PagingSystem
 
 def run_paging():
