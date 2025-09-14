@@ -1,5 +1,12 @@
 class PagingSystem:
     def __init__(self, mem_size, page_size):
+        if page_size <= 0:
+            raise ValueError("Erro: o tamanho da página deve ser maior que zero.")
+        if mem_size <= 0:
+            raise ValueError("Erro: o tamanho da memória deve ser maior que zero.")
+        if mem_size < page_size:
+            raise ValueError("Erro: o tamanho da memória deve ser maior ou igual ao tamanho da página.")
+        
         self.mem_size = mem_size
         self.page_size = page_size
         self.frames = [None] * (mem_size // page_size)

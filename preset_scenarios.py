@@ -1,4 +1,5 @@
 from paging.paging import PagingSystem
+from contig.contiguous import MemoryManager
 
 def scenario1():
     
@@ -35,3 +36,22 @@ def scenario2():
     ps.show_frames()
 
     return ps
+
+def scenario3():
+
+    mm = MemoryManager(100)
+
+    print("\n=== Cenário 3 contiguo: demonstrando fragmentacao externa ===")
+    mm.create_process("A", 20, "first")
+    mm.create_process("B", 35, "best")
+    mm.create_process("C", 10, "worst")
+    mm.create_process("D", 15, "circular")
+
+    print("\nRemovendo processo B")
+    mm.remove_process("B")
+    mm.show_memory()
+
+    print("\nTabela final")
+    mm.show_processtable()
+
+    return mm

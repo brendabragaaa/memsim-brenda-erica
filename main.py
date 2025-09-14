@@ -8,6 +8,7 @@ def menu():
         print("2. Paginacao Pura")
         print("0. Sair")
 
+        print("------------------")
         option = input("Escolha uma opcao: ")
 
         if option == "1":
@@ -21,7 +22,10 @@ def menu():
             print("Opcao Invalida!")
 
 def run_contiguous():
-    mm = MemoryManager(100)  #define a memoria com 100 unidades
+    mem_size = int(input("Digite o tamanho total da memoria: ")) 
+    mm = MemoryManager(mem_size)
+    print("------------------")
+    
     while True:
         print("\n---- Alocacao Contigua ----")
         print("1. Criar Processo")
@@ -30,14 +34,19 @@ def run_contiguous():
         print("4. Mostrar Tabela de Processos")
         print("0. Voltar")
 
+        print("------------------")
         op = input("Escolha: ")
 
         if op == "1":
-            name = input("Nomde do Processo: ")
+            print("------------------")
+            name = input("Nome do Processo: ")
+            print("------------------")
             size = int(input("Tamanho: "))
+            print("------------------")
             algorithm = input("Algoritmo (First, Best, Worst e Circular): ").lower() #lower para converter todos os caracteres
             mm.create_process(name, size, algorithm)
         elif op == "2":
+            print("------------------")
             name = input("Nome do processo a ser removido: ")
             mm.remove_process(name)
         elif op == "3":
@@ -50,8 +59,11 @@ def run_contiguous():
             print("Opcao Invalida!")
 
 def run_paging():
+    print("------------------")
     mem_size = int(input("Tamanho Total da Memoria: "))
+    print("------------------")
     page_size = int(input("Tamanho da pagina: "))
+    print("------------------")
     ps = PagingSystem(mem_size, page_size)
 
     while True:
@@ -61,17 +73,22 @@ def run_paging():
         print("3. Mostrar Tabela de Paginas de um Processo")
         print("0. Voltar")
 
+        print("------------------")
         op = input("Escolha: ")
 
         if op == "1":
+            print("------------------")
             name = input("Nome do Processo: ")
+            print("------------------")
             size = int(input("Tamanho: "))
             ps.create_process(name, size)
         elif op == "2":
             ps.show_frames()
         elif op == "3":
+            print("------------------")
             name = input("Nome do Processo: ")
-            ps.show_pagetable()
+            print("------------------")
+            ps.show_pagetable(name)
         elif op == "0":
             break
         else: 
