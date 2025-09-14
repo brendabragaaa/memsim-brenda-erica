@@ -51,6 +51,15 @@ Isso abrirá o menu principal do simulador, com as seguintes opções:
     - Percentual de **fragmentação interna** (modo paginação);
     - Comparação entre os dois 
 
+## Decisões de Projeto e Arquitetura
+- Estrutura modular: `main.py` centraliza o menu e a lógica de interface de linha de comando.
+- Módulos separados para **alocação contígua** e **paginação**, facilitando manutenção e extensão.
+- Uso de **classes** para representar processos e páginas, permitindo simulações independentes.
+
+## 🖼️ Exemplos de Uso
+![Menu Principal](<img width="549" height="500" alt="image" src="https://github.com/user-attachments/assets/195ed0bd-46af-470a-9040-361ee6cc8a57" />)
+![Exemplo de Alocação]()
+
 ## Integrantes 
 - Brenda Braga de Lima
 - Érica Pilati Sartoreto
