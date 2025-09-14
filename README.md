@@ -4,18 +4,18 @@
 Este projeto implementa um simulador interativo de **Gerenciamento de Memória** em Sistemas Operacionais.
 Ele permite explorar os conceitos de **Alocação Contígua Dinâmica** e **Paginação Pura**, com diferentes algoritmos e métricas de fragmentação.
 
-## **Como executar**
-
-### **Pré-requisitos**
-- Python 3.8+
-- Git (para clonar o repositório)
-
 ## Linguagem e Interface
 - **Linguagem**: Python 3.8+
 - **Interface**: Linha de comando (CLI) interativa
 
 ## Dependências
-- Apenas bibliotecas padrão do Python. 
+- Apenas bibliotecas padrão do Python.
+
+## **Como executar**
+
+### **Pré-requisitos**
+- Python 3.8+
+- Git (para clonar o repositório)
 
 ### **Executando**
 Na pasta raiz do repositório, execute:
