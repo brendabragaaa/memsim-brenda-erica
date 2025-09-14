@@ -57,7 +57,7 @@ Isso abrirá o menu principal do simulador, com as seguintes opções:
 - Uso de **classes** para representar processos e páginas, permitindo simulações independentes.
 
 ## Exemplos de Uso
-![Menu Principal](https://1drv.ms/i/c/65fa3de8fdfa9318/EUsqhL-iloRJmevVIir2EhAB2jdEuE4HN4yLnmVy_z-0Dg?e=LrLfEG)
+![Menu Principal](imagens/menu_principal.png)
 ![Exemplo de Alocação](https://1drv.ms/i/c/65fa3de8fdfa9318/Ec6DTymCdTpMllT-l8Peyq4ByE0Dr4wTcGP4AH-budMGXQ?e=7l4AEV)
 
 ## Integrantes 
