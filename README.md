@@ -10,6 +10,13 @@ Ele permite explorar os conceitos de **Alocação Contígua Dinâmica** e **Pagi
 - Python 3.8+
 - Git (para clonar o repositório)
 
+## Linguagem e Interface
+- **Linguagem**: Python 3.8+
+- **Interface**: Linha de comando (CLI) interativa
+
+## Dependências
+- Apenas bibliotecas padrão do Python. 
+
 ### **Executando**
 Na pasta raiz do repositório, execute:
 
