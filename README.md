@@ -56,9 +56,9 @@ Isso abrirá o menu principal do simulador, com as seguintes opções:
 - Módulos separados para **alocação contígua** e **paginação**, facilitando manutenção e extensão.
 - Uso de **classes** para representar processos e páginas, permitindo simulações independentes.
 
-## 🖼️ Exemplos de Uso
-![Menu Principal](<img width="549" height="500" alt="image" src="https://github.com/user-attachments/assets/195ed0bd-46af-470a-9040-361ee6cc8a57" />)
-![Exemplo de Alocação]()
+## Exemplos de Uso
+![Menu Principal](https://1drv.ms/i/c/65fa3de8fdfa9318/EUsqhL-iloRJmevVIir2EhAB2jdEuE4HN4yLnmVy_z-0Dg?e=LrLfEG)
+![Exemplo de Alocação](https://1drv.ms/i/c/65fa3de8fdfa9318/Ec6DTymCdTpMllT-l8Peyq4ByE0Dr4wTcGP4AH-budMGXQ?e=7l4AEV)
 
 ## Integrantes 
 - Brenda Braga de Lima
