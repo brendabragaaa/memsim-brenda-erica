@@ -57,8 +57,11 @@ Isso abrirá o menu principal do simulador, com as seguintes opções:
 - Uso de **classes** para representar processos e páginas, permitindo simulações independentes.
 
 ## Exemplos de Uso
-![Menu Principal](imagens/menu_principal.png)
-![Exemplo de Alocação](https://1drv.ms/i/c/65fa3de8fdfa9318/Ec6DTymCdTpMllT-l8Peyq4ByE0Dr4wTcGP4AH-budMGXQ?e=7l4AEV)
+![Menu Principal](imagens\menu_principal.png)
+![Exemplo de Alocação](imagens\alocacao.png)
+![Exemplo de Memória](imagens\mostrar_memoria.png)
+![Exemplo de Paginação](imagens\paginacao.png)
+
 
 ## Integrantes 
 - Brenda Braga de Lima
