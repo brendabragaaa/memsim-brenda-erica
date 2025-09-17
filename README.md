@@ -4,6 +4,13 @@
 Este projeto implementa um simulador interativo de **Gerenciamento de Memória** em Sistemas Operacionais.
 Ele permite explorar os conceitos de **Alocação Contígua Dinâmica** e **Paginação Pura**, com diferentes algoritmos e métricas de fragmentação.
 
+## Linguagem e Interface
+- **Linguagem**: Python 3.8+
+- **Interface**: Linha de comando (CLI) interativa
+
+## Dependências
+- Apenas bibliotecas padrão do Python.
+
 ## **Como executar**
 
 ### **Pré-requisitos**
@@ -43,6 +50,18 @@ Isso abrirá o menu principal do simulador, com as seguintes opções:
     - Percentual de **fragmentação externa** (modo contíguo);
     - Percentual de **fragmentação interna** (modo paginação);
     - Comparação entre os dois 
+
+## Decisões de Projeto e Arquitetura
+- Estrutura modular: `main.py` centraliza o menu e a lógica de interface de linha de comando.
+- Módulos separados para **alocação contígua** e **paginação**, facilitando manutenção e extensão.
+- Uso de **classes** para representar processos e páginas, permitindo simulações independentes.
+
+## Exemplos de Uso
+![Menu Principal](imagens\menu_principal.png)
+![Exemplo de Alocação](imagens\alocacao.png)
+![Exemplo de Memória](imagens\mostrar_memoria.png)
+![Exemplo de Paginação](imagens\paginacao.png)
+
 
 ## Integrantes 
 - Brenda Braga de Lima
