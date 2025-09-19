@@ -56,12 +56,6 @@ Isso abrirá o menu principal do simulador, com as seguintes opções:
 - Módulos separados para **alocação contígua** e **paginação**, facilitando manutenção e extensão.
 - Uso de **classes** para representar processos e páginas, permitindo simulações independentes.
 
-## Exemplos de Uso
-![Menu Principal](imagens\menu_principal.png)
-![Exemplo de Alocação](imagens\alocacao.png)
-![Exemplo de Memória](imagens\mostrar_memoria.png)
-![Exemplo de Paginação](imagens\paginacao.png)
-
 
 ## Integrantes 
 - Brenda Braga de Lima
